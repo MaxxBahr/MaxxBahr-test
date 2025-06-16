@@ -29,6 +29,7 @@ public:
             std::chrono::seconds(1),
             [this]() {
                 this->publish_vam_message(latest_latitude_, latest_longitude_, latest_altitude_, latest_heading_);
+            }
             });
 
         RCLCPP_INFO(this->get_logger(), "VamTx Node gestartet.");
